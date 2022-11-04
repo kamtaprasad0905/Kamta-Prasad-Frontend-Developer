@@ -1,9 +1,20 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import Header from "./components/shared/Header";
+import { Routes, Route } from "react-router-dom";
+import routes from "./constants/routes";
+import Capsules from "./containers/Capsules";
+import Rockets from "./containers/Rockets";
 
-function App() {
-  return <h1 className="text-3xl font-bold underline text-red-600">Simple React Typescript Tailwind Sample</h1>;
-}
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path={routes.capsules} element={<Capsules />} />
+        <Route path={routes.rockets} element={<Rockets />} />
+      </Routes>
+    </>
+  );
+};
 
 export default App;
