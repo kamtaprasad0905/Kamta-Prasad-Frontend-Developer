@@ -1,9 +1,13 @@
 import moment from "moment";
 import React from "react";
-import { Spinner } from "react-bootstrap";
+import { Spinner, Table } from "react-bootstrap";
 
 const CapsuleDetails = ({ capsuleDetail, loading }: any) => {
-  console.log(loading);
+  console.log(
+    capsuleDetail.missions.map((e: any) => {
+      return e.name;
+    })
+  );
   return (
     <>
       {loading ? (
@@ -34,6 +38,7 @@ const CapsuleDetails = ({ capsuleDetail, loading }: any) => {
             <div className="text-xl">:</div>
             <div className="text-xl">{capsuleDetail.original_launch_unix}</div>
           </div>
+
           <div className="flex justify-between mt-3">
             <div className="text-xl">Reuse Count</div>
             <div className="text-xl">:</div>
@@ -48,6 +53,27 @@ const CapsuleDetails = ({ capsuleDetail, loading }: any) => {
             <div className="text-xl">Type</div>
             <div className="text-xl">:</div>
             <div className="text-xl">{capsuleDetail.type}</div>
+          </div>
+          <div className="table-responsive mt-3">
+            <div className="text-xl mb-1"> Missions</div>
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Flight</th>
+                </tr>
+              </thead>
+              <tbody>
+                {capsuleDetail.missions.map((mission: any) => {
+                  return (
+                    <tr>
+                      <td>{mission?.name}</td>
+                      <td>{mission?.flight}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </Table>
           </div>
           <div className="flex justify-between mt-3">
             <div className="text-xl">Details</div>

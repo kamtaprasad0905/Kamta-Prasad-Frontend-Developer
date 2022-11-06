@@ -15,7 +15,7 @@ const Register = () => {
     } else if (res.error === 1) {
       setErrorMessage(res?.msg);
     } else {
-      setErrorMessage(res?.msg);
+      setErrorMessage("Server is not working contact at 6395372945");
     }
   };
 

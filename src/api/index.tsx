@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = " https://72da-47-9-180-125.ap.ngrok.io";
+const BASE_URL = "https://87a2-47-9-180-125.in.ngrok.io";
 const get = async (url: string, token: string | null, _config: any = {}) => {
   const config: any = { ..._config };
   if (token) {

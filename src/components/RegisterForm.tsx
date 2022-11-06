@@ -33,7 +33,7 @@ const RegisterForm = ({ registerCallBack, errorMessage }: any) => {
         </FloatingLabel>
         <FloatingLabel label="Phone Number">
           <Form.Control
-            type="phone"
+            type="number"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             placeholder="+916395372945"
@@ -67,7 +67,7 @@ const RegisterForm = ({ registerCallBack, errorMessage }: any) => {
                   Loading...
                 </div>
               ) : (
-                "Login"
+                "Register"
               )}
             </Button>
           </Col>

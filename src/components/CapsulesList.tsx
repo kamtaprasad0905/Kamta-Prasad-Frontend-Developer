@@ -3,6 +3,7 @@ import { Card, Badge, Button, Dropdown, Form, Spinner } from "react-bootstrap";
 import moment from "moment";
 import AppModal from "./shared/AppModal";
 import ViewSpaceDetails from "../containers/ViewCapsule";
+import { CapsulesParams } from "../interface/CapsulesParams";
 const CapsulesList = ({ capsules, loading }: any) => {
   const [show, setShow] = useState<boolean>(false);
   const [id, setId] = useState<any | null>(null);
@@ -26,7 +27,7 @@ const CapsulesList = ({ capsules, loading }: any) => {
         <div>
           {loading ? (
             <div className="row mt-3 mx-3">
-              {capsules.map((capsule: any) => {
+              {capsules.map((capsule: CapsulesParams) => {
                 return (
                   <>
                     <div className=" col-lg-3" key={capsule.capsule_serial}>

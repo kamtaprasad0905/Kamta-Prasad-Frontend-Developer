@@ -20,7 +20,7 @@ const Capsules = () => {
   useEffect(() => {
     getAllCapsules();
   }, [status, type, page, loading]);
-
+  console.log(capsules);
   return (
     <>
       <Header />

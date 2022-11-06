@@ -11,14 +11,14 @@ const Login = () => {
   const navigate = useNavigate();
   const onSignIn = async (email: string, password: string) => {
     const res = await users.signIn({ email, password });
-
+    console.log(res);
     if (res?.error === 0) {
       navigate(routes.capsules);
       onLogin(res.success);
     } else if (res.error === 1) {
       setErrorMessage(res?.msg);
     } else {
-      setErrorMessage(res?.msg);
+      setErrorMessage("Server is not working contact at 6395372945");
     }
   };
 

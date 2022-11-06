@@ -73,7 +73,10 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="text-gray-600 hover:text-blue-600">
-                  <div className="text-decoration-none text-danger font-medium text-xl" onClick={onLogout}>
+                  <div
+                    className="text-decoration-none cursor-pointer text-danger font-medium text-xl"
+                    onClick={onLogout}
+                  >
                     Logout
                   </div>
                 </li>
