@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import routes from "../../constants/routes";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useUserAuth } from "../../context/AuthProvider";
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
+  const url = useLocation();
+  const { onLogout }: any = useUserAuth();
+
   return (
     <>
       <nav className="w-full bg-white shadow">
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+        <div className="justify-between px-4 mx-auto md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <h2 className="text-2xl font-bold">SPACEX</h2>
@@ -42,18 +46,36 @@ const Header = () => {
             </div>
           </div>
           <div>
-            <div
-              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}
-            >
-              <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className="text-gray-600 hover:text-blue-600">
-                  <Link to={routes.rockets}>Rockets</Link>
+            <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0  ${navbar ? "block" : "hidden"}`}>
+              <ul className="items-center pl-0 justify-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+                <li className="text-gray-600  hover:text-blue-600">
+                  <Link
+                    className={
+                      url.pathname == routes.rockets
+                        ? "text-decoration-none text-xl font-medium"
+                        : "text-decoration-none text-dark text-xl font-medium"
+                    }
+                    to={routes.rockets}
+                  >
+                    Rockets
+                  </Link>
                 </li>
                 <li className="text-gray-600 hover:text-blue-600">
-                  <Link to={routes.capsules}>Capsules</Link>
+                  <Link
+                    className={
+                      url.pathname == routes.capsules
+                        ? "text-decoration-none text-xl font-medium"
+                        : "text-decoration-none text-dark text-xl font-medium"
+                    }
+                    to={routes.capsules}
+                  >
+                    Capsules
+                  </Link>
                 </li>
                 <li className="text-gray-600 hover:text-blue-600">
-                  <Link to={routes.signIn}>Logout</Link>
+                  <div className="text-decoration-none text-danger font-medium text-xl" onClick={onLogout}>
+                    Logout
+                  </div>
                 </li>
               </ul>
             </div>

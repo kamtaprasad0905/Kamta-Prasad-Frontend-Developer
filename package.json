@@ -1,4 +1,5 @@
 {
+  "homepage": "https://kamtaprasad0905.github.io/Kamta-Prasad-Frontend-Developer",
   "name": "app",
   "version": "0.1.0",
   "private": true,
@@ -10,7 +11,11 @@
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
+    "axios": "^1.1.3",
+    "bootstrap": "^5.2.2",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
