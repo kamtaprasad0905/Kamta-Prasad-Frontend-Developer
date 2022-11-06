@@ -1,7 +1,6 @@
 import axios from "axios";
 const BASE_URL = "https://af56-47-9-180-125.in.ngrok.io ";
-
-https: const get = async (url: string, token: string | null, _config: any = {}) => {
+const get = async (url: string, token: string | null, _config: any = {}) => {
   const config: any = { ..._config };
   if (token) {
     config.headers = { Authorization: `Bearer ${token}` };
