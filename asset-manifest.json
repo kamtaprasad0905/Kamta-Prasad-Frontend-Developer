@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Kamta-Prasad-Frontend-Developer/static/css/main.78bb50dc.css",
-    "main.js": "/Kamta-Prasad-Frontend-Developer/static/js/main.aa44b91a.js",
+    "main.js": "/Kamta-Prasad-Frontend-Developer/static/js/main.6ecb8ea6.js",
     "static/js/787.c1112931.chunk.js": "/Kamta-Prasad-Frontend-Developer/static/js/787.c1112931.chunk.js",
     "index.html": "/Kamta-Prasad-Frontend-Developer/index.html",
     "main.78bb50dc.css.map": "/Kamta-Prasad-Frontend-Developer/static/css/main.78bb50dc.css.map",
-    "main.aa44b91a.js.map": "/Kamta-Prasad-Frontend-Developer/static/js/main.aa44b91a.js.map",
+    "main.6ecb8ea6.js.map": "/Kamta-Prasad-Frontend-Developer/static/js/main.6ecb8ea6.js.map",
     "787.c1112931.chunk.js.map": "/Kamta-Prasad-Frontend-Developer/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.78bb50dc.css",
-    "static/js/main.aa44b91a.js"
+    "static/js/main.6ecb8ea6.js"
   ]
 }
